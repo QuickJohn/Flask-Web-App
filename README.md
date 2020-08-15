@@ -11,7 +11,7 @@ Python app.
 
 Create virtual environment(Windows)
 
-  $ py -3 -m venv <virtual_environment_name>
+      $ py -3 -m venv <virtual_environment_name>
 
 
 Export all requirements from virtual env
@@ -21,29 +21,39 @@ Export all requirements from virtual env
 
 Delet virtual environment
 
-  $ rm -rf <environment_name>  < linux command
+      $ rm -rf <environment_name>  < linux command
 
 
 Load requirements
 
-  $ pip install -r <requirements.txt>
+      $ pip install -r <requirements.txt>
 
 
-Set envoronment variable(Windows PS)$  env:FLASK_APP = "flask_blog.py"
+Set envoronment variable(Windows PS)
 
-(Linux)$ export FLASK_APP=flask_blog.py
+      $  env:FLASK_APP = "flask_blog.py"
 
-(Windows cmd.exe)$  set FLASK_APP=flask_app.py
+(Linux)
+      
+      $ export FLASK_APP=flask_blog.py
+
+(Windows cmd.exe)
+      
+      $  set FLASK_APP=flask_blog.py
 
 IMPORTANT: Environment variable must be set with every new shell/terminal
 
-Debug Mode$  $env:FLASK_DEBUG = 1
+Debug Mode$  
+      
+      $env:FLASK_DEBUG = 1
 
 Runs application directly through Python by adding following conditional in app
 
 	if __name__ == '__main__':
+    app.run(debug=True)
 
-    	  app.run(debug=True)
+Allows for server to be run with without creating environment variables
 
-Allows for server to be run with {  $ python flask_blog.py  } command, without creating environment variables
+	$ python <flask_app.py>
+
 
